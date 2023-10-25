@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+@font-face{
+ font-family: font1;
+ src: url(fonts/RussianLand.ttf);
+
+
+}
+@font-face{
+    font-family: font2;
+    src: url(fonts/SovietProgram-Italic.ttf);
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.986)
+}
+
+.container{
+
+    height: 530px;
+    width: 780px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.imagem img{
+    height: 100%;
+    width: 100%;
+}
+.navegacao{
+    position: absolute;
+     bottom: 20px; /*  distancia a partir da base */
+     left: 50%; /*distancia a  partir da esquerda */
+     transform: translate(-50%);/* alterar o eixo principal */
+     display: flex;/*oloccar o conteudo lado a lado */
+}
+.bar{
+    background-color: aliceblue;
+    width: 30px;
+    height: 5px;
+    margin: 6px;
+    transition: 3s;
+    cursor: pointer;
+}
+.bar:hover{
+    background: red;
+}
+input{
+    display: none;
+}
+.imagens{
+    display: flex;
+    width: 600%;
+    height: 100%;
+
+}
+.imagem{
+    width: 16.6666666667%;
+
+
+}
+
+#imagem1:checked  ~ .img1{
+
+    margin-left: 0;
+}
+
+#imagem2:checked  ~ .img2{
+    margin-left: -16.6666666667%;
+
+}
+#imagem3:checked  ~ .im3{
+    margin-left: -33.3333333333%;
+}
+#imagem4:checked ~ .img4{
+    margin-left: -50%;
+}
+#imagem5:checked ~ .img5{
+    margin-left: -66.6666666667%;
+    
+}
+#imagem6:checked ~ .img6{
+    margin-left: -83.3333333333%;
+}
+h1{
+    color: white;
+   font-family: font1;
+   
+
+   
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    color: white;
+    transform: translate(-50%);
+    font-family: font2;
+
+}
